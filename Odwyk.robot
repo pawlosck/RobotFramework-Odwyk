@@ -36,7 +36,7 @@ Listuj Linki
     ${nazwa_podcastu}=    BuiltIn.Set Variable    Odwyk
     Otworz Strone Podcastu    ${nazwa_podcastu}
     ${ostatni_odcinek}=    BuiltIn.Run Keyword If    '${ostatni_odcinek}'=='${None}'    Pobierz Ilosc Odcinkow    ${nazwa_podcastu}
-                    ...                    ELSE    Set Variable    ${ostatni_odcinek}
+	...                    ELSE    Set Variable    ${ostatni_odcinek}
     BuiltIn.Log    ${ostatni_odcinek}    console=true
     ${lista_odcinkow}=    Utworz Liste Nieparzystych Liczb    ${pierwszy odcinek}    ${ostatni_odcinek}
     :FOR    ${value}    IN  @{lista_odcinkow}
